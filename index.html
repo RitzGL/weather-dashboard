@@ -5,45 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
 </head>
 <body>
     <header>
-        <h1>Weather Dashboard</h1>
+        <div class="box content is-large">
+            <h1 class="pl-2 has-text-centered">Weather Dashboard</h1>
+        </div>
     </header>
     <!-- Search bar and previous searches -->
-    <section id="search-form">
-        <div>
-            <h2>Search for a City:</h2>
-            <input type="text" placeholder="City Name">
-            <button>Search</button>
-            <hr>
-            <ul>
-                <!-- empty list will be populated with JS -->
-                <li></li>
-            </ul>
-        </div>
-    </section>
+    <div class="box columns">
+        <section class="column is-two-fifths" id="search-form">
+            <div class="box content is-large">
+                    
+                <div class="box">
+                    <h2 class="pl-1">Search for a City:</h2>
+                    
+                    <input class="input is-fullwidth is-primary is-medium" 
+                    type="text" placeholder="City Name">
 
-    <!-- Dashboard section -->
-    <section id="dashboard">
-        <h2>City</h2>
-        <p id="dash-temp"></p>
-        <p id="dash-wind"></p>
-        <p id="dash-humidity"></p>
-        <p id="dash-uv"></p>
-    </section>
+                    <hr>
 
-    <!-- 5-Day forecast section -->
-    <section id="card-holder">
-        <!-- Clone this div, insert values based on date -->
-        <div id="card">
-            <h3 id="card-date"></h3>
-            <i></i>
-            <p id="card-temp"></p>
-            <p id="card-wind"></p>
-            <p id="card-humidity"></p>
+                    <button class="button is-primary is-fullwidth">Search</button>
+                    
+                </div>
+
+                
+
+                <hr>
+
+                <div class="buttons box" id="prev-searches">
+                    <button class="button is-primary is-fullwidth"></button>
+                    <button class="button is-primary is-fullwidth"></button>
+                    <button class="button is-primary is-fullwidth"></button>
+                    <button class="button is-primary is-fullwidth"></button>
+                    <button class="button is-primary is-fullwidth"></button>
+                    <button class="button is-primary is-fullwidth"></button>
+                </div>
+                
+            </div>
+
+        </section>
+        
+    
+        <!-- Dashboard section -->
+        <div class="column is-two-fifths">
+            <section class="box" id="dashboard">
+                <h2>City</h2>
+                <p id="dash-temp"></p>
+                <p id="dash-wind"></p>
+                <p id="dash-humidity"></p>
+                <p id="dash-uv"></p>
+            </section>
+
+            <!-- 5-Day forecast section -->
+            <section id="card-holder">
+                <!-- Clone this div, insert values based on date -->
+                <div class="box" id="card">
+                    <h3 id="card-date">template</h3>
+                    <i></i>
+                    <p id="card-temp">template</p>
+                    <p id="card-wind">template</p>
+                    <p id="card-humidity">template</p>
+                </div>
+            </section>
         </div>
-    </section>
+    </div>
 
 </body>
 </html>
