@@ -10,38 +10,43 @@
 </head>
 <body>
     <header>
-        <div class="box content is-large">
-            <h1 class="pl-2 has-text-centered">Weather Dashboard</h1>
+        <div class="box content is-large has-background-primary">
+            <h1 class="pl-2 has-text-centered has-text-white">
+                ☀ Weather Dashboard ☀
+            </h1>
         </div>
     </header>
-    <!-- Search bar and previous searches -->
     <div class="box columns">
-        <section class="column is-two-fifths" id="search-form">
+        <!-- this is to generate empty column -->
+        <div class="column is-1"></div>
+
+        <section class="column is-5" id="search-form">
+            <!-- Search bar and previous searches -->
             <div class="box content is-large">
-                    
                 <div class="box">
-                    <h2 class="pl-1">Search for a City:</h2>
+                    <h3>Search for a City:</h3>
                     
                     <input class="input is-fullwidth is-primary is-medium" 
                     type="text" placeholder="City Name">
 
                     <hr>
 
-                    <button class="button is-primary is-fullwidth">Search</button>
+                    <div class="buttons">
+                        <button class="button is-primary is-fullwidth">Search</button>
+                        <button class="button is-danger is-fullwidth">Clear Searches</button>    
+                    </div>
                     
                 </div>
 
-                
-
-                <hr>
-
+                <!-- previous searches section -->
                 <div class="buttons box" id="prev-searches">
-                    <button class="button is-primary is-fullwidth"></button>
-                    <button class="button is-primary is-fullwidth"></button>
-                    <button class="button is-primary is-fullwidth"></button>
-                    <button class="button is-primary is-fullwidth"></button>
-                    <button class="button is-primary is-fullwidth"></button>
-                    <button class="button is-primary is-fullwidth"></button>
+                    <h3>Previous Searches:</h3>
+                    <button class="button is-primary is-fullwidth">Prev</button>
+                    <button class="button is-primary is-fullwidth">Prev</button>
+                    <button class="button is-primary is-fullwidth">Prev</button>
+                    <button class="button is-primary is-fullwidth">Prev</button>
+                    <button class="button is-primary is-fullwidth">Prev</button>
+                    <button class="button is-primary is-fullwidth">Prev</button>
                 </div>
                 
             </div>
@@ -50,8 +55,8 @@
         
     
         <!-- Dashboard section -->
-        <div class="column is-two-fifths">
-            <section class="box" id="dashboard">
+        <div class="column is-5">
+            <section class="box content" id="dashboard">
                 <h2>City</h2>
                 <p id="dash-temp"></p>
                 <p id="dash-wind"></p>
@@ -62,12 +67,12 @@
             <!-- 5-Day forecast section -->
             <section id="card-holder">
                 <!-- Clone this div, insert values based on date -->
-                <div class="box" id="card">
-                    <h3 id="card-date">template</h3>
+                <div class="box content" id="card">
+                    <h3 id="card-date">Date</h3>
                     <i></i>
-                    <p id="card-temp">template</p>
-                    <p id="card-wind">template</p>
-                    <p id="card-humidity">template</p>
+                    <p id="card-temp">Temperature</p>
+                    <p id="card-wind">Wind</p>
+                    <p id="card-humidity">Humidity</p>
                 </div>
             </section>
         </div>
