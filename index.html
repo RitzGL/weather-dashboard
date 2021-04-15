@@ -27,13 +27,13 @@
                     <h3>Search for a City:</h3>
                     
                     <input class="input is-fullwidth is-primary is-medium" 
-                    type="text" placeholder="City Name">
+                    type="text" placeholder="City Name" id="search-field">
 
                     <hr>
 
                     <div class="buttons">
-                        <button class="button is-primary is-fullwidth">Search</button>
-                        <button class="button is-danger is-fullwidth">Clear Searches</button>    
+                        <button class="button is-primary is-fullwidth" id="search-btn">Search</button>
+                        <button class="button is-danger is-fullwidth" id="clear-btn">Clear Searches</button>    
                     </div>
                     
                 </div>
@@ -57,7 +57,8 @@
         <!-- Dashboard section -->
         <div class="column is-5">
             <section class="box content" id="dashboard">
-                <h2>City</h2>
+
+                <h2 id="dashboard-title">City <span id="date"></span></h2>
                 <p id="dash-temp"></p>
                 <p id="dash-wind"></p>
                 <p id="dash-humidity"></p>
@@ -77,6 +78,8 @@
             </section>
         </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="js/script.js"></script>
+   
 </body>
 </html>
