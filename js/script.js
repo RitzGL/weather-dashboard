@@ -80,8 +80,7 @@ function getCoordinates(){
     // AKA not trying to access data not given by this function
     .then((weather) => {
         // store latitude and longitude to later inject in second fetch request
-        // co.lat = weather.coord.lat
-        // co.lon = weather.coord.lon
+        
         getWeather(weather.coord.lat, weather.coord.lon)
     })
 }
@@ -126,21 +125,14 @@ function getWeather(lat, lon){
         console.log("stored string",storedString)
     })
 
-    //this will display the relevant information to the DOM
-    // dashboard.date.textContent = storedCity.date
-    // dashboard.temp.textContent = storedCity.temp
-    // dashboard.wind.textContent = storedCity.wind
-    // dashboard.humidity.textContent = storedCity.humidity
-    // dashboard.uv.textContent = storedCity.uv
 }
 
+function displayObject(storedCity){
+    //this will display the relevant information to the DOM
+    dashboard.date.textContent = storedCity.date
+    dashboard.temp.textContent = storedCity.temp
+    dashboard.wind.textContent = storedCity.wind
+    dashboard.humidity.textContent = storedCity.humidity
+    dashboard.uv.textContent = storedCity.uv    
+}
 getCoordinates();
-
-
-// on 5-day forecast
-        // Date
-        // icon
-        // temp
-        // wind
-        // humidity
-// append objects as elements to html
