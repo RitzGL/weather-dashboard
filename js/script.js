@@ -5,6 +5,7 @@ const wthrURL = "https://api.openweathermap.org/data/2.5/"
 
 // single object to populate the html elements
 let city = {
+    name: searchCity,
     date: moment().format("D/M/YY"),
     temp: 0,
     wind: 0,
@@ -120,7 +121,7 @@ function getWeather(lat, lon){
         let storedString = localStorage.getItem("City")
 
         let storedCity = JSON.parse(storedString)
-
+        displayObject(storedCity)
         console.log("stored object",storedCity)
         console.log("stored string",storedString)
     })
@@ -129,6 +130,7 @@ function getWeather(lat, lon){
 
 function displayObject(storedCity){
     //this will display the relevant information to the DOM
+    dashboard.title.textContent = storedCity.name
     dashboard.date.textContent = storedCity.date
     dashboard.temp.textContent = storedCity.temp
     dashboard.wind.textContent = storedCity.wind
